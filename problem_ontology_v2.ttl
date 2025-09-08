@@ -1,0 +1,52 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/ontology#> .
+
+### Concepts
+
+ex:Wellbeing a skos:Concept ;
+    skos:prefLabel "Wellbeing" ;
+    skos:altLabel "Health", "Happiness" ;
+    skos:definition "State of being comfortable, healthy, and happy." ;
+    ex:work_environment "low" ;
+    ex:urgent false ;
+    ex:emotional true ;
+    ex:skills "soft, technical" ;
+    ex:problem_ontology "JobSearch" ;
+    ex:wellbeing_label "Health and Energy" .
+
+ex:Growth a skos:Concept ;
+    skos:prefLabel "Growth" ;
+    skos:altLabel "Personal Development", "Learning" ;
+    skos:definition "The process of improving skills or personal capabilities." ;
+    ex:work_environment "variable" ;
+    ex:urgent false ;
+    ex:emotional true ;
+    ex:skills "learning, technical" ;
+    ex:problem_ontology "JobSearch" ;
+    ex:wellbeing_label "Skill Development" .
+
+ex:Finance a skos:Concept ;
+    skos:prefLabel "Finance" ;
+    skos:altLabel "Money Management", "Budgeting" ;
+    skos:definition "Management of money, savings, and expenditures." ;
+    ex:work_environment "any" ;
+    ex:urgent true ;
+    ex:emotional true ;
+    ex:skills "financial literacy" ;
+    ex:problem_ontology "JobSearch" ;
+    ex:wellbeing_label "Financial Security" .
+
+ex:HumanCentered a skos:Concept ;
+    skos:prefLabel "Human-centered" ;
+    skos:altLabel "User-focused", "Person-oriented" ;
+    skos:definition "Approach that focuses on the needs and experiences of people." ;
+    ex:work_environment "collaborative" ;
+    ex:urgent false ;
+    ex:emotional true ;
+    ex:skills "empathy, communication" ;
+    ex:problem_ontology "JobSearch" ;
+    ex:wellbeing_label "User Experience" .
+
+### Relationships
+ex:Wellbeing skos:related ex:Growth .
+ex:Wellbeing skos
