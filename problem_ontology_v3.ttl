@@ -1,0 +1,91 @@
+@prefix skos: http://www.w3.org/2004/02/skos/core# .
+@prefix skosxl: http://www.w3.org/2008/05/skos-xl# .
+@prefix ex: http://example.org/concepts/ .
+@prefix rdfs: http://www.w3.org/2000/01/rdf-schema# .
+@prefix who: https://id.who.int/icd/entity/ .
+@prefix snomed: http://purl.bioontology.org/ontology/SNOMEDCT/ .
+@prefix mesh: http://id.nlm.nih.gov/mesh/ .
+@prefix wd: http://www.wikidata.org/entity/ .
+SKOS Concepts
+
+ex:HumanCentered a skos:Concept ;
+skos:definition "A state or approach that prioritizes the balance and well-being of humans, considering their needs in a social, emotional, and physical context." ;
+skosxl:prefLabel ex:label_HumanCentered ;
+skosxl:altLabel ex:label_centeredInHarmony, ex:label_peopleFocused, ex:label_holistic ;
+skos:related wd:Q185567, who:1297587178, wd:Q111718870 .
+
+who:1297587178 a skos:Concept ;
+skosxl:prefLabel ex:label_Wellbeing ;
+skosxl:altLabel ex:label_wellness, ex:label_health, ex:label_happiness, ex:label_contentment ;
+skos:narrower snomed:48694002, mesh:D010148 .
+
+snomed:48694002 a skos:Concept ;
+skosxl:prefLabel ex:label_MentalHealth ;
+skosxl:altLabel ex:label_emotionalHealth, ex:label_mentalState ;
+skos:broader who:1297587178 .
+
+mesh:D010148 a skos:Concept ;
+skosxl:prefLabel ex:label_PhysicalHealth ;
+skosxl:altLabel ex:label_physicalCondition, ex:label_fitness, ex:label_healthiness, ex:label_strength ;
+skos:broader who:1297587178 .
+
+wd:Q11075355 a skos:Concept ;
+skosxl:prefLabel ex:label_PersonalDevelopment ;
+skosxl:altLabel ex:label_development, ex:label_progress, ex:label_improvement, ex:label_maturation .
+
+wd:Q1417072 a skos:Concept ;
+skosxl:prefLabel ex:label_Finance ;
+skosxl:altLabel ex:label_moneyManagement, ex:label_banking, ex:label_investment, ex:label_financialAffairs .
+
+wd:Q1860 a skos:Concept ;
+skosxl:prefLabel ex:label_Environment ;
+skosxl:altLabel ex:label_surroundings, ex:label_setting, ex:label_habitat ;
+skos:narrower wd:Q238025 .
+
+wd:Q238025 a skos:Concept ;
+skosxl:prefLabel ex:label_HouseholdTasks ;
+skosxl:altLabel ex:label_housework, ex:label_chores ;
+skos:broader wd:Q1860 .
+SKOS-XL Labels
+
+ex:label_Wellbeing a skosxl:Label ; skosxl:literalForm "Wellbeing" .
+ex:label_wellness a skosxl:Label ; skosxl:literalForm "wellness" .
+ex:label_health a skosxl:Label ; skosxl:literalForm "health" .
+ex:label_happiness a skosxl:Label ; skosxl:literalForm "happiness" .
+ex:label_contentment a skosxl:Label ; skosxl:literalForm "contentment" .
+
+ex:label_MentalHealth a skosxl:Label ; skosxl:literalForm "Mental Health" .
+ex:label_emotionalHealth a skosxl:Label ; skosxl:literalForm "emotional health" .
+ex:label_mentalState a skosxl:Label ; skosxl:literalForm "mental state" .
+
+ex:label_PhysicalHealth a skosxl:Label ; skosxl:literalForm "Physical Health" .
+ex:label_physicalCondition a skosxl:Label ; skosxl:literalForm "physical condition" .
+ex:label_fitness a skosxl:Label ; skosxl:literalForm "fitness" .
+ex:label_healthiness a skosxl:Label ; skosxl:literalForm "healthiness" .
+ex:label_strength a skosxl:Label ; skosxl:literalForm "strength" .
+
+ex:label_HumanCentered a skosxl:Label ; skosxl:literalForm "Human-centered" .
+ex:label_centeredInHarmony a skosxl:Label ; skosxl:literalForm "centered in harmony" .
+ex:label_peopleFocused a skosxl:Label ; skosxl:literalForm "people-focused" .
+ex:label_holistic a skosxl:Label ; skosxl:literalForm "holistic" .
+
+ex:label_PersonalDevelopment a skosxl:Label ; skosxl:literalForm "Personal development" .
+ex:label_development a skosxl:Label ; skosxl:literalForm "development" .
+ex:label_progress a skosxl:Label ; skosxl:literalForm "progress" .
+ex:label_improvement a skosxl:Label ; skosxl:literalForm "improvement" .
+ex:label_maturation a skosxl:Label ; skosxl:literalForm "maturation" .
+
+ex:label_Finance a skosxl:Label ; skosxl:literalForm "Finance" .
+ex:label_moneyManagement a skosxl:Label ; skosxl:literalForm "money management" .
+ex:label_banking a skosxl:Label ; skosxl:literalForm "banking" .
+ex:label_investment a skosxl:Label ; skosxl:literalForm "investment" .
+ex:label_financialAffairs a skosxl:Label ; skosxl:literalForm "financial affairs" .
+
+ex:label_Environment a skosxl:Label ; skosxl:literalForm "Environment" .
+ex:label_surroundings a skosxl:Label ; skosxl:literalForm "surroundings" .
+ex:label_setting a skosxl:Label ; skosxl:literalForm "setting" .
+ex:label_habitat a skosxl:Label ; skosxl:literalForm "habitat" .
+
+ex:label_HouseholdTasks a skosxl:Label ; skosxl:literalForm "Household Tasks" .
+ex:label_housework a skosxl:Label ; skosxl:literalForm "housework" .
+ex:label_chores a skosxl:Label ; skosxl:literalForm "chores" .
