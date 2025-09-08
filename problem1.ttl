@@ -1,0 +1,36 @@
+@prefix ex: <http://example.org/concepts#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+######################
+# PROBLEM STATEMENT
+######################
+
+ex:Problem1 a ex:ProblemStatement ;
+    dct:title "Job Search & Internship Stress"@en ;
+    dct:description """
+I'm affected, but so is my partner. 
+It's a problem when I'm looking for courses to take, and stressing about my internship. 
+It happens because I'm worried about my grief and my energy. 
+The origin comes from not having had a good work environment so far and feeling unskilled (tech-wise). 
+I need money because my savings are running out (probably in the next 1.5 years).
+"""@en ;
+    dct:created "2025-09-08"^^xsd:date ;
+    foaf:maker ex:User1 ;
+
+    # Tags from thesaurus
+    skos:related ex:Emotional ;
+    skos:related ex:Wellbeing ;
+    skos:related ex:Skills ;
+    skos:related ex:WorkEnvironment ;
+    skos:related ex:Finance ;
+    skos:related ex:Urgent .
+
+######################
+# USER (OPTIONAL)
+######################
+
+ex:User1 a foaf:Person ;
+    foaf:name "Anonymous User" .
