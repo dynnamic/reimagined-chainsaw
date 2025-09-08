@@ -1,0 +1,65 @@
+@prefix ex: <http://example.org/concepts#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+#####################################################################
+# Concept Scheme
+#####################################################################
+ex:ProblemOntology a skos:ConceptScheme ;
+    dct:title "Problem-Solving Ontology"@en ;
+    dct:creator "Your Name" ;
+    dct:description "A SKOS-based thesaurus for tagging problem statements with human-centered categories."@en .
+
+#####################################################################
+# Concepts
+#####################################################################
+
+# Wellbeing
+ex:Wellbeing a skos:Concept ;
+    skos:prefLabel "Wellbeing"@en ;
+    skos:altLabel "Self-care"@en , "Resilience"@en , "Health"@en ;
+    skos:definition "A state of good health, including emotional, mental, and physical aspects."@en ;
+    skos:inScheme ex:ProblemOntology ;
+    skos:related ex:Growth .
+
+# Growth
+ex:Growth a skos:Concept ;
+    skos:prefLabel "Growth"@en ;
+    skos:altLabel "Learning"@en , "Skill development"@en ;
+    skos:definition "The process of improving skills, competencies, or perspectives over time."@en ;
+    skos:inScheme ex:ProblemOntology ;
+    skos:related ex:Wellbeing ;
+    skos:related ex:HumanCentered .
+
+# Finance
+ex:Finance a skos:Concept ;
+    skos:prefLabel "Finance"@en ;
+    skos:altLabel "Money"@en , "Savings"@en , "Economics"@en ;
+    skos:definition "Resources and management of money, assets, and income in personal or professional life."@en ;
+    skos:inScheme ex:ProblemOntology ;
+    skos:related ex:Wellbeing .
+
+# Human-centered
+ex:HumanCentered a skos:Concept ;
+    skos:prefLabel "Human-centered"@en ;
+    skos:altLabel "User-focused"@en , "People-first"@en ;
+    skos:definition "An approach that prioritizes human needs, values, and experience in problem-solving and design."@en ;
+    skos:inScheme ex:ProblemOntology ;
+    skos:related ex:Growth .
+
+#####################################################################
+# SKOS-XL (Complex Label Management Example)
+#####################################################################
+
+# Preferred Label as a resource for Wellbeing
+ex:WellbeingLabel a skosxl:Label ;
+    skosxl:literalForm "Wellbeing"@en .
+
+ex:Wellbeing skosxl:prefLabel ex:WellbeingLabel .
+
+# Alternative Label as a resource
+ex:SelfCareLabel a skosxl:Label ;
+    skosxl:literalForm "Self-care"@en .
+
+ex:Wellbeing skosxl:altLabel ex:SelfCareLabel .
